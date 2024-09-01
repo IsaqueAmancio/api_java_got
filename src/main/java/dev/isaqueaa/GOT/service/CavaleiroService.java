@@ -5,6 +5,8 @@ import dev.isaqueaa.GOT.repository.CavaleiroRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class CavaleiroService {
 
@@ -14,8 +16,10 @@ public class CavaleiroService {
     public Cavaleiro addCAvaleiro(Cavaleiro cavaleiro){
         return repo.save(cavaleiro);
     }
-    //deletar cavaleiro
-
+    //mostrar cavaleiros
+    public List<Cavaleiro> verCavaleiro(){
+        return repo.findAll();
+    }
 
 
 
